@@ -25,18 +25,20 @@
         }
 	</style>
 </head>
-  <body>
+<body style="background-color: #E5F0EA;">
 	<header>
+		{% include "header.html" %}
 		<h1> {{title | default: "My Blog"}} </h1>
 	</header>
 	<main>
 		{% if user %}
-		 Hello, {{ user.name | default: "unknown"}}!
+		Hello, {{ user.name | default: "unknown"}}!
 		{% endif %}
 		{{content}}
 		<!--return home-->
 		<a href="/">Home</a>
 	</main>
+	{% include "footer.html" %}
 	<script src="index.js"></script>
-  </body>
+</body>
 </html>
