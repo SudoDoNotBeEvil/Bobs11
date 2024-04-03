@@ -15,7 +15,7 @@ collections:
         - {label: "Summary", name: "summary", widget: "string"}
         - {label: "Collaborators", name: "collaborators", widget: "string"}
         - {label: "Date", name: "date", widget: "datetime"}
-        - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
+        - {label: "Tags", name: "tags", widget: "list", default: ["article"]}
         - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Featured Image", name: "image", widget: "image", required: false}
         - {label: "Image caption", name: "imageAlt", widget: "string", required: false}

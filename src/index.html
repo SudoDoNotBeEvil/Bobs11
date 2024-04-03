@@ -3,15 +3,15 @@ layout: layout.html
 ---
 
 <div class="grid">
-  {% for post in collections.post %}
-    <div class="blog-post">
-        <h2 A><a href="{{post.url}}"> <font color=#6D0B0A> {{post.data.title}} </font> </a></h2>
+  {% for article in collections.article %}
+    <div class="blog-article">
+        <h2 A><a href="{{article.url}}"> <font color=#6D0B0A> {{article.data.title}} </font> </a></h2>
         <hr style="border-top: dotted 1px;" />
-        <p> <font color=#6D0B0A> {{post.data.articledate}} </font> </p>
+        <p> <font color=#6D0B0A> with: {{article.data.date}} </font> </p>
         <hr style="border-top: dotted 1px;" />
-        <p> <font color=#6D0B0A> {{post.data.cowriters}} </font> </p>
+        <p> <font color=#6D0B0A> {{article.data.collaborators}} </font> </p>
         <hr style="border-top: dotted 1px; background-color: transparent" />
-        <p > <font color=#6D0B0A> {{post.data.description}} </font> </p>
+        <p > <font color=#6D0B0A> {{article.data.summary}} </font> </p>
         <hr style="border-top: dotted 1px; background-color: transparent" />
     </div>
   {% endfor %}
