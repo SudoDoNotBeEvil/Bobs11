@@ -1,3 +1,9 @@
+backend:
+    name: git-gateway
+    branch: main
+    media_folder: "_site/assets/articles"
+    public_folder: "/assets/articles"
+
 collections:
     - name: "articles"
       label: "Articles"
@@ -10,6 +16,6 @@ collections:
         - {label: "Collaborators", name: "collaborators", widget: "string"}
         - {label: "Date", name: "date", widget: "datetime"}
         - {label: "Tags", name: "tags", widget: "list", default: ["post"]}
+        - {label: "Body", name: "body", widget: "markdown"}
         - {label: "Featured Image", name: "image", widget: "image", required: false}
         - {label: "Image caption", name: "imageAlt", widget: "string", required: false}
-        - {label: "Body", name: "body", widget: "markdown"}
