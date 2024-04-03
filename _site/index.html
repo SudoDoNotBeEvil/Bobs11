@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML 5 Boilerplate</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* CSS for the blog post frame */
+        .blog-post {
+            overflow: hidden;
+            <!--text-overflow: ellipsis;-->
+            white-space: nowrap;
+            border: 1px solid #ccc;
+            height: 300px;
+			width: 500px;
+            
+        }
+        .grid {
+            margin: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-gap: 20px;
+        }
+	</style>
+</head>
+  <body>
+	<header>
+		<h1> My Blog </h1>
+	</header>
+	<main>
+		
+		
+<div class="grid">
+  
+    <div class="blog-post">
+        <h2><a href="/posts/post-1/">The Thrill of Bike Sports</a></h2>
+        <hr style="border-top: dotted 1px;" />
+        <p> Fri Oct 01 2021 04:00:00 GMT+0400 (Georgia Standard Time) </p>
+        <hr style="border-top: dotted 1px;" />
+        <p> Freddy Mercury </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+        <p> Explore the exhilarating world of bike sports, from road cycling to mountain biking, and discover the benefits and safety tips for these popular activities. </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+    </div>
+  
+    <div class="blog-post">
+        <h2><a href="/posts/post-2/">The World of Water Sports</a></h2>
+        <hr style="border-top: dotted 1px;" />
+        <p> Wed Apr 03 2024 04:00:00 GMT+0400 (Georgia Standard Time) </p>
+        <hr style="border-top: dotted 1px;" />
+        <p> Emily Watson </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+        <p> Dive into the thrilling realm of water sports, from surfing to scuba diving, and uncover the joys and safety measures associated with these aquatic activities. Water Sports Wonderland </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+    </div>
+  
+    <div class="blog-post">
+        <h2><a href="/posts/post-3/">Third Post</a></h2>
+        <hr style="border-top: dotted 1px;" />
+        <p>  </p>
+        <hr style="border-top: dotted 1px;" />
+        <p>  </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+        <p>  </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+    </div>
+  
+</div>
+
+		<!--return home-->
+		<a href="/">Home</a>
+	</main>
+	<script src="index.js"></script>
+  </body>
+</html>

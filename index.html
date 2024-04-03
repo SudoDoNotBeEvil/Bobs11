@@ -1,0 +1,18 @@
+---
+layout: layout.html
+---
+
+<div class="grid">
+  {% for post in collections.post %}
+    <div class="blog-post">
+        <h2><a href="{{post.url}}">{{post.data.title}}</a></h2>
+        <hr style="border-top: dotted 1px;" />
+        <p> {{post.data.articledate}} </p>
+        <hr style="border-top: dotted 1px;" />
+        <p> {{post.data.cowriters}} </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+        <p> {{post.data.description}} </p>
+        <hr style="border-top: dotted 1px; background-color: transparent" />
+    </div>
+  {% endfor %}
+</div>
