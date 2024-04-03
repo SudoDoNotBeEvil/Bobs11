@@ -6,23 +6,24 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>HTML 5 Boilerplate</title>
 	<link rel="stylesheet" href="style.css">
+	<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	<style>
 		/* CSS for the blog post frame */
-        .blog-post {
-            overflow: hidden;
-            <!--text-overflow: ellipsis;-->
-            white-space: nowrap;
-            border: 1px solid #ccc;
-            height: 300px;
+		.blog-post {
+			overflow: hidden;
+			<!-- text-overflow: ellipsis; -->
+			white-space: nowrap;
+			border: 1px solid #ccc;
+			height: 300px;
 			width: 500px;
-            
-        }
-        .grid {
-            margin: 100px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            grid-gap: 20px;
-        }
+		}
+
+		.grid {
+			margin: 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+			grid-gap: 20px;
+		}
 	</style>
 </head>
 <body style="background-color: #E5F0EA;">
@@ -40,5 +41,17 @@
 	</main>
 	{% include "footer.html" %}
 	<script src="index.js"></script>
+
+	<script>
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on("init", (user) => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+						document.location.href = "/admin/";
+					});
+				}
+			});
+		}
+	</script>
 </body>
 </html>
