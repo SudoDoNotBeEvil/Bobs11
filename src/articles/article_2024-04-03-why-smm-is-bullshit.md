@@ -5,7 +5,7 @@ summary: "Social Media Marketing (SMM) has gained immense popularity in recent
   Twitter to promote their products and services. However, beneath the surface,
   SMM often falls short of its promises and can be described as nothing more
   than bullshit. Here's why:"
-collaborators: "-"
+collaborators: ""
 date: 2030-04-03T17:12
 tags:
   - article
