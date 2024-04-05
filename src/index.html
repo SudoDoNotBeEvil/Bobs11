@@ -4,15 +4,27 @@ layout: layout.html
 
 <div class="grid">
   {% for article in collections.article %}
-    <div class="blog-article">
-        <h2 A><a href="{{article.url}}"> <font color=#6D0B0A> {{article.data.title}} </font> </a></h2>
-        <hr style="border-top: dotted 1px;" />
-        <p> <font color=#6D0B0A> with: {{article.data.date}} </font> </p>
-        <hr style="border-top: dotted 1px;" />
-        <p> <font color=#6D0B0A> {{article.data.collaborators}} </font> </p>
-        <hr style="border-top: dotted 1px; background-color: transparent" />
-        <p > <font color=#6D0B0A> {{article.data.summary}} </font> </p>
-        <hr style="border-top: dotted 1px; background-color: transparent" />
+    <div class="mainPage_article_summary">
+        <div style="height: 90%;">
+            <!--write full object-->
+            <p style="word-break: break-all; white-space: normal;"> {{article.url}} </p>
+            <h2 A><a href="{{article.url}}"> <font color=#6D0B0A> {{article.data.title}} </font> </a></h2>
+            <hr style="border-top: dotted 1px;" />
+
+            <p style="word-break: break-all; white-space: normal;"> <font color=#6D0B0A> {{article.data.date}} </font> </p>
+            <hr style="border-top: dotted 1px;" />
+
+
+            {% if article.data.collaborators %}
+            <p style="word-break: break-word; white-space: normal;"> <font color=#6D0B0A> with: {{article.data.collaborators}} </font> </p>
+            <hr style="border-top: dotted 1px; background-color: transparent" />
+            {% endif %}
+
+            <p style="word-break: break-word; white-space: normal; color =#6D0B0A; "> {{article.data.summary}} </font> </p>
+        </div>
+        <div style="height: 10%; position: relative;">
+        <hr style="border-top: dotted 3px; background-color: transparent" />
+        </div>
     </div>
   {% endfor %}
 </div>
