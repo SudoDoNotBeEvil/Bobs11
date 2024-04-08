@@ -9,7 +9,7 @@ collections:
       label: "Articles"
       folder: "src/articles"
       create: true
-      slug: "article_{{year}}-{{month}}-{{day}}-{{slug}}"
+      slug: "article_{{title|slugify}}_{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Summary", name: "summary", widget: "string"}
