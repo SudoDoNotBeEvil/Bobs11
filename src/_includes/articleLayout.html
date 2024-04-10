@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>Horizontal Mousewheel Scroll</title>
-    <style>
+    <style>   
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }
+
+        .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+
         body, html {
             margin: 0;
             padding: 0;
@@ -34,7 +58,7 @@
             white-space: normal;
         }
 
-        .articlePreviewGrid {
+        .projectPreview_Grid {
             display: grid;
             width: 100%;
             height: 600px;
@@ -46,39 +70,55 @@
             grid-template-columns: 25% 75%;
         }
 
-        .articlePreviewGrid > card {
+        .projectPreview_Grid > card {
             grid-area: card;
             background-color: #f0f0f0;
         }
 
-        .articlePreviewGrid > pictures {
+        .projectPreview_Grid > pictures {
             grid-area: pictures;
             background-color: #4cff00;
         }
 
-        .articlePreviewGrid > navigation {
+        .projectPreview_Grid > navigation {
             grid-area: navigation;
             background-color: #ff0000;
         }
 
-        .articlePreviewGrid > imgcaption {
+        .projectPreview_Grid > imgcaption {
             grid-area: caption;
             background-color: #ff6a00;
         }
 
-        .articlePreviewGrid > main {
+        .projectPreview_Grid > main {
             grid-area: main;
             background-color: #0000ff;
         }
     </style>
+
 </head>
 <body>
-
     {% include "header.html" %}
-
-    <div class="articlePreviewGrid">
+    <div class="projectPreview_Grid">
         <card> {{title}} </card>
-        <pictures>df</pictures>
+        <pictures>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </pictures>
         <navigation>df</navigation>
         <imgcaption>asd</imgcaption>
         <main>
@@ -92,18 +132,6 @@
 
     <a href="/">Home</a>
     {% include "footer.html" %}
-    <!--
-        <div>
-            <h1>block1</h1>
-         </div>
-        <div style="width: 1500px; height: 750px; background: red;">
-            <div id="outer">
-                <div class="blog-article">
-                    {{content }}
-                </div>
-            </div>
-        </div>
-        -->
 
     <script>
         document.getElementById('outer').addEventListener('wheel', function (e) {
@@ -112,6 +140,23 @@
             this.scrollLeft -= (delta);
             e.preventDefault();
         }, false);
+    </script>
+
+      <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
     </script>
 </body>
 </html>
